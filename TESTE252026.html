@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portfólio Roxo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-color: #0f0c29;
+            --main-purple: #6a11cb;
+            --light-purple: #2575fc;
+            --glass-bg: rgba(255, 255, 255, 0.1);
+            --text-color: #ffffff;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            color: var(--text-color);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        /* Efeito de Vidro (Glassmorphism) */
+        .glass-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            text-align: center;
+            max-width: 500px;
+            width: 90%;
+        }
+
+        h1 {
+            font-weight: 700;
+            background: linear-gradient(to right, #a18cd1 0%, #fbc2eb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-weight: 300;
+            opacity: 0.8;
+            margin-bottom: 30px;
+        }
+
+        /* Botões Estilizados */
+        .btn-custom {
+            background: linear-gradient(45deg, #6a11cb 0%, #2575fc 100%);
+            border: none;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            width: 100%;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn-custom:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(106, 17, 203, 0.4);
+            color: #fff;
+        }
+
+        .btn-outline-custom {
+            background: transparent;
+            border: 2px solid #a18cd1;
+            color: #a18cd1;
+            padding: 10px 25px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+
+        .btn-outline-custom:hover {
+            background: #a18cd1;
+            color: #0f0c29;
+        }
+
+        /* Animação de fundo */
+        .blob {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: rgba(106, 17, 203, 0.3);
+            filter: blur(80px);
+            border-radius: 50%;
+            z-index: -1;
+            animation: move 10s infinite alternate;
+        }
+
+        @keyframes move {
+            from { transform: translate(-50px, -50px); }
+            to { transform: translate(50px, 50px); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="blob"></div>
+
+    <div class="glass-card">
+        <h1>Meu Portfólio</h1>
+        <p>Estudante de Ciência da Computação | Dev Front-End em formação</p>
+        
+        <div class="d-grid gap-2">
+            <button class="btn btn-custom">Ver Meus Projetos</button>
+            <button class="btn btn-custom">Currículo (Auxiliar Fiscal)</button>
+            <button class="btn btn-outline-custom">Entrar em contato via WhatsApp</button>
+            <button class="btn btn-outline-custom">Acesse meu GitHub</button>
+        </div>
+    </div>
+
+</body>
+</html>
